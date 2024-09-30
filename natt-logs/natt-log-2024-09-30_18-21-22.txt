@@ -1,0 +1,74 @@
+[18:21:22][PluginLoader][WARNING] Plugins directory not found.
+[18:21:22][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/email-sender-config/-/raw/main/test-config-1.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[18:21:22][NATTCore][INFO] Working directory path: /Users/aliaksei/Documents/study/vs/email-sender
+[18:21:22][NATTCore][INFO] Start loading of the configuration file ...
+[18:21:22][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/email-sender-config/-/raw/main/test-config-1.yaml?ref_type=heads)
+[18:21:22][NATTCore][INFO] Configuration loading done
+[18:21:22][NATTCore][INFO] Start building test structure according to the configuration ...
+[18:21:22][NATTCore][INFO] Test structure ...
+[18:21:22][NATTCore][INFO] Test structure building done
+[18:21:22][NATTCore][INFO] Start test executing ...
+[18:21:22][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[18:21:22][NATTCore][INFO] Starts execution on the root keyword  ...
+[18:21:22][MessageBuffer][INFO] Message buffer created for module with name: server-1
+[18:21:22][SMTPEmailServer][INFO] (server-1) SMTP Email Server is listening on port: 9999
+[18:21:22][TestSuiteKw][INFO] Test case 'Test odeslání emailu' starts executing now
+[18:21:22][MessageBuffer][INFO] Message buffer created for module with name: default
+[18:21:22][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar localhost 9999 sender@email.com recipient@email.com Subject1 'Text Message'
+[18:21:22][ProcessManager][INFO] New PID (4303) added to file
+[18:21:22][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 5000 ms
+[18:21:22][ProcessManager][INFO] PID (4303) removed from file
+[18:21:22][ExternalProgramRunner][INFO] (default) External application ends with exit code 0
+[18:21:27][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[18:21:27][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 0
+[18:21:27][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected value '1,000000' must be same as the value of the variable '0')
+[18:21:27][WaitKw][INFO] Waiting: 500 ms
+[18:21:28][TestSuiteKw][ERROR] Test suite 'Zakladní test odesílání Emailů' - Test case 'Test odeslání emailu' failed
+[18:21:28][MessageBuffer][INFO] Message buffer cleared
+[18:21:28][TestSuiteKw][INFO] Test case 'Test obsahu emailu 1' starts executing now
+[18:21:28][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar localhost 9999 sender@email.com recipient@email.com Subject1 'Text Message'
+[18:21:28][ProcessManager][INFO] New PID (4315) added to file
+[18:21:28][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 5000 ms
+[18:21:29][ProcessManager][INFO] PID (4315) removed from file
+[18:21:29][ExternalProgramRunner][INFO] (default) External application ends with exit code 0
+[18:21:33][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[18:21:33][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[18:21:33][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text 'Text Message')
+[18:21:33][WaitKw][INFO] Waiting: 500 ms
+[18:21:34][TestSuiteKw][ERROR] Test suite 'Zakladní test odesílání Emailů' - Test case 'Test obsahu emailu 1' failed
+[18:21:34][MessageBuffer][INFO] Message buffer cleared
+[18:21:35][TestSuiteKw][INFO] Test case 'Test obsahu emailu 2' starts executing now
+[18:21:35][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar localhost 9999 sender@email.com recipient@email.com Subject1111 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin mattis lacinia justo. Curabitur bibendum justo non orci. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+[18:21:35][ProcessManager][INFO] New PID (4326) added to file
+[18:21:35][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 5000 ms
+[18:21:35][ProcessManager][INFO] PID (4326) removed from file
+[18:21:35][ExternalProgramRunner][INFO] (default) External application ends with exit code 0
+[18:21:40][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[18:21:40][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[18:21:40][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin mattis lacinia justo. Curabitur bibendum justo non orci. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.')
+[18:21:40][WaitKw][INFO] Waiting: 500 ms
+[18:21:40][TestSuiteKw][ERROR] Test suite 'Zakladní test odesílání Emailů' - Test case 'Test obsahu emailu 2' failed
+[18:21:40][MessageBuffer][INFO] Message buffer cleared
+[18:21:41][TestSuiteKw][INFO] Test case 'Test odeslání neplatného emailu' starts executing now
+[18:21:41][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar localhost 9999 sender@email.com recipient@email.com
+[18:21:41][ProcessManager][INFO] New PID (4340) added to file
+[18:21:41][WaitKw][INFO] Waiting: 3000 ms
+[18:21:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Usage: java App <smtp_host> <port> <from_email> <to_email> <subject> <message>'
+[18:21:41][ProcessManager][INFO] PID (4340) removed from file
+[18:21:41][ExternalProgramRunner][INFO] (default) External application ends with exit code 0
+[18:21:44][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 0
+[18:21:44][WaitKw][INFO] Waiting: 500 ms
+[18:21:44][TestSuiteKw][INFO] Test suite 'Zakladní test odesílání Emailů' - Test case 'Test odeslání neplatného emailu' passed
+[18:21:45][MessageBuffer][INFO] Message buffer cleared
+[18:21:45][MessageBuffer][INFO] Message buffer cleared
+[18:21:45][MessageBuffer][INFO] Message buffer cleared
+[18:21:45][SMTPEmailServer][INFO] (server-1) SMTP email server [server-1] terminated
+[18:21:45][NATTCore][INFO] Test executing finished
+[18:21:45][NATTCore][INFO] Start generating test report
+[18:21:45][TestReportGenerator][INFO] Report saved to file
+[18:21:45][NATTCore][WARNING] Failed test cases: "Test odeslání emailu", "Test obsahu emailu 1", "Test obsahu emailu 2"
+[18:21:45][NATTCore][INFO] Final score: 1,000000
+[18:21:45][NATTCore][ERROR] Testing done. Leaving status: FAILED
